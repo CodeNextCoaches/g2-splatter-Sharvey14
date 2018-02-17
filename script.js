@@ -1,4 +1,14 @@
 // declare and initialize global variables
+var canvas;
+
+
+function setup() {
+  canvas = createCanvas(500,400);
+  canvas.parent("#canvas-area");
+  canvas.mousePressed(drawEllipse);
+  background(65, 60, 88);
+}
+
 
 /*
  * setup()
@@ -8,6 +18,11 @@
 /*
  * drawEllipse()
  */
+ function drawEllipse() {
+  fill("#ff0000");
+  noStroke();
+  ellipse(mouseX, mouseY, 100, 100);
+ }
 
 
 /*
